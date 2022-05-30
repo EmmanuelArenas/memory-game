@@ -1,16 +1,21 @@
 import "./MemoBlock.css";
 
-const MemoBlock = ({ memoBlock }) => {
-  <div class="memo-block">
+const MemoBlock = ({ animating, handleMemoClick, memoBlock }) => (
+  <div
+    className="memo-block"
+    onClick={() =>
+      !memoBlock.flipped && !animating && handleMemoClick(memoBlock)
+    }
+  >
     <div
       className={`memo-block-inner ${
         memoBlock.flipped && "memo-block-flipped"
       }`}
     >
-      <div class="memo-block-front"></div>
-      <div class="memo-block-back">{memoBlock.emoji}</div>
+      <div className="memo-block-front"></div>
+      <div className="memo-block-back">{memoBlock.emoji}</div>
     </div>
-  </div>;
-};
+  </div>
+);
 
 export default MemoBlock;
