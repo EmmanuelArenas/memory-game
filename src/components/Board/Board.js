@@ -1,12 +1,17 @@
-import { MemoBlock } from "../MemoBlock/MemoBlock";
+import MemoBlock from "../MemoBlock/MemoBlock";
 import "./Board.css";
 
-const Board = ({ memoBlocks }) => {
+const Board = ({ animating, handleMemoClick, memoBlocks }) => {
   return (
     <main className="board">
       {memoBlocks.map((memoBlock, i) => {
         return (
-          <MemoBlock key={`${i}_${memoBlock.emoji}`} memoBlock={memoBlock} />
+          <MemoBlock
+            key={`${i}_${memoBlock.emoji}`}
+            animating={animating}
+            handleMemoClick={handleMemoClick}
+            memoBlock={memoBlock}
+          />
         );
       })}
     </main>
