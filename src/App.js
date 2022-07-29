@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Board from "./components/Board/Board";
+import WINNER from "../src/assets/winner.gif";
 const emojiList = [..."💣🧤🎩🌮🎱🌶🍕🦖"];
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
   // para que el usuario no haga click en mas bloques
   const [animating, setAnimating] = useState(false);
 
+  const [memo, setMemo] = useState([]);
   useEffect(() => {
     const shuffledEmojiList = shuffleArray([...emojiList, ...emojiList]);
     setShuffledMemoBlocks(
@@ -23,9 +25,7 @@ const App = () => {
     }
     return a;
   };
-
   const handleMemoClick = (memoBlock) => {
-    let count
     const flippedMemoBlock = { ...memoBlock, flipped: true };
     let shuffledMemoBlocksCopy = [...shuffledMemoBlocks];
     shuffledMemoBlocksCopy.splice(memoBlock.index, 1, flippedMemoBlock);
@@ -34,8 +34,8 @@ const App = () => {
       setselectedMemoBlock(memoBlock);
     } else if (selectedMemoBlock.emoji === memoBlock.emoji) {
       setselectedMemoBlock(null);
-      console.log(selectedMemoBlock);
-      count ++;
+      setMemo([...memo, "a"]);
+      console.log(shuffledMemoBlocksCopy);
     } else {
       setAnimating(true);
       setTimeout(() => {
@@ -52,17 +52,26 @@ const App = () => {
     }
   };
 
+  // console.log(memo);
+
   return (
     <div className="container">
       <h1>Memory Game</h1>
       <button className="btn" onClick={() => window.location.reload()}>
-        <span>Refresh</span>
+        Restar
       </button>
-      <Board
-        memoBlocks={shuffledMemoBlocks}
-        animating={animating}
-        handleMemoClick={handleMemoClick}
-      />
+      {memo.length === 8 ? (
+        <div>
+          <h2>WINNER</h2>
+          {/* <img src={WINNER} alt="img" /> */}
+        </div>
+      ) : (
+        <Board
+          memoBlocks={shuffledMemoBlocks}
+          animating={animating}
+          handleMemoClick={handleMemoClick}
+        />
+      )}
     </div>
   );
 };
