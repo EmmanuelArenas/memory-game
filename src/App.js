@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Board from "./components/Board/Board";
-import WINNER from "../src/assets/winner.gif";
+// import WINNER from "../src/assets/winner.gif";
 const emojiList = [..."💣🧤🎩🌮🎱🌶🍕🦖"];
 
 const App = () => {
