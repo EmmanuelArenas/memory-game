@@ -32,8 +32,10 @@ La idea general fue crear una aplicación en la cual se puedan jugar el clasico 
 
 ## Frontend
 
-Se desarrollo una aplicación de React que contiene las siguientes pantallas/rutas.
-
 **Ruta principal**
 
-- [ ] Un tablero de 4x4 de cartas para voltera. Al recargar se revuelven las imganes aleatoriamente.
+Se desarrollo una aplicación de React que contiene las siguientes caracteristicas:
+
+- [ ] Un tablero de 4x4 de cartas para voltear. Al recargar se revuelven las imganes aleatoriamente.
+- [ ] Un boton de restar para volver a iniciar el juego
+- [ ] Al ganar se renderiza un stado Winner
