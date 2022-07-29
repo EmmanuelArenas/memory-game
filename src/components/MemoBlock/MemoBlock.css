@@ -27,7 +27,7 @@
 }
 
 .memo-block-back {
-  background-color: #6b3135;
+  background-color: var(--color-bg-variant);
   transform: rotateY(180deg);
   box-shadow: 5px 5px 10px 0px rgb(0 0 0 / 50%);
   display: flex;
@@ -37,5 +37,19 @@
 }
 
 .memo-block-front {
-  background-color: #84dccf;
+  background-color: var(--color-primary-variant);
+}
+
+/* Medium Devices */
+@media screen and (max-width: 1024px) {
+  .memo-block-back {
+    font-size: 70px;
+  }
+}
+
+/* Small Devices */
+@media screen and (max-width: 600px) {
+  .memo-block-back {
+    font-size: 35px;
+  }
 }

@@ -1,4 +1,3 @@
-import "./App.css";
 import { useEffect, useState } from "react";
 import Board from "./components/Board/Board";
 const emojiList = [..."💣🧤🎩🌮🎱🌶🍕🦖"];
@@ -26,6 +25,7 @@ const App = () => {
   };
 
   const handleMemoClick = (memoBlock) => {
+    let count
     const flippedMemoBlock = { ...memoBlock, flipped: true };
     let shuffledMemoBlocksCopy = [...shuffledMemoBlocks];
     shuffledMemoBlocksCopy.splice(memoBlock.index, 1, flippedMemoBlock);
@@ -34,6 +34,8 @@ const App = () => {
       setselectedMemoBlock(memoBlock);
     } else if (selectedMemoBlock.emoji === memoBlock.emoji) {
       setselectedMemoBlock(null);
+      console.log(selectedMemoBlock);
+      count ++;
     } else {
       setAnimating(true);
       setTimeout(() => {
@@ -51,11 +53,17 @@ const App = () => {
   };
 
   return (
-    <Board
-      memoBlocks={shuffledMemoBlocks}
-      animating={animating}
-      handleMemoClick={handleMemoClick}
-    />
+    <div className="container">
+      <h1>Memory Game</h1>
+      <button className="btn" onClick={() => window.location.reload()}>
+        <span>Refresh</span>
+      </button>
+      <Board
+        memoBlocks={shuffledMemoBlocks}
+        animating={animating}
+        handleMemoClick={handleMemoClick}
+      />
+    </div>
   );
 };
 
