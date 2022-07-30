@@ -18,9 +18,6 @@
 
 La idea general fue crear una aplicación en la cual se puedan jugar el clasico juego memorama (conocido por ese nombre en México)
 
-- Buscar pokemons
-- Filtrarlos / Ordenarlos
-- Crear nuevos pokemons
 
 #### Tecnologías ocupadas
 
