@@ -1,38 +1,56 @@
-# Memory Game
+[🇺🇸-English](./readme-EN/README.md)
 
-**Un clasico juego de memoria utlizando React y Node**
+<h1 align="center">Memorama</h1>
 
-<img height="200" src="./src/assets/memory.png" />
+<p align="center">
+   <img src="https://img.shields.io/badge/License-MIT-green">
+    <img src="https://img.shields.io/badge/Status-EN DESARROLLO-blue">
+</p>
 
-**Cuenta con la versión estable de:**
+<img align='right' height="200" src="https://user-images.githubusercontent.com/15266097/183833511-8b582f64-d0e2-4b9c-ba33-cb8be8e8fb6a.png" />
 
-- **Node**: 16.16.0
-- **NPM**: 8.11.0
+## Descripción 📋
 
-> **Importante:** Las dependencias actuales se encuentran en las siguientes versiones:
+Juego de tarjetas de memoria. El fin de este juego es lograr encontrar todos los pares de cartas para ganar. Se ocupo React para el manejo de estados. Tiene un boton para el reiniciar el juego. Al momento de ganar aparece un mensaje de winner.
+
+**Pasos para ejecutar el proyecto en tu equipo 🔧**
+
+```txt
+    1. Forkea el repositorio
+    2. Clona el repositorio en tu local
+    3. Instala las dependencias con: npm install
+    4. Ejecuta: npm start
+```
+
+> **_Importante:_** Las dependencias se encuentran en las siguientes versiones:
 
 - **react**: 18.1.0
 - **react-dom**: 18.1.0
 
-## Enunciado
+## Tecnologías ocupadas 🖥
 
-La idea general fue crear una aplicación en la cual se puedan jugar el clasico juego memorama (conocido por ese nombre en México)
+- React
+- JavaScript
+- HTML
+- CSS
 
+## ¿Quieres Contribuir? 🤝
 
-#### Tecnologías ocupadas
+Aun hay mucho que se puede hacer con este proyecto. Aquí te dejo algunas ideas por si gustas contribuir.
 
-- [ ] React
-- [ ] NodeJS
-- [ ] JavaScript
-- [ ] HTML
-- [ ] CSS
+- **Contador de puntos**
+- **Seleccionar la cantidad de cartas**
+- **Cambio modo claro/oscuro**
 
-## Frontend
+## Autor
 
-**Ruta principal**
+| [<img src="https://user-images.githubusercontent.com/15266097/186324804-11517757-4f94-4a12-a975-d21800dca11b.png" width=115><br><sub>Emmanuel Arenas</sub>](https://github.com/EmmanuelArenas) |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-Se desarrollo una aplicación de React que contiene las siguientes caracteristicas:
+## Licencia 📄
 
-- [ ] Un tablero de 4x4 de cartas para voltear. Al recargar se revuelven las imganes aleatoriamente.
-- [ ] Un boton de restar para volver a iniciar el juego
-- [ ] Al ganar se renderiza un stado Winner
+Licencia: [MIT](License)
+
+## Previsualización
+
+<img height="500" src="./src/assets/memory.gif" />
